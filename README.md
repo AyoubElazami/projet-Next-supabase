@@ -1,41 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TaskMaster
 
-## Getting Started
+TaskMaster est une application web développée avec **Next.js** et **Supabase**, permettant aux utilisateurs de créer et afficher leurs posts personnels. L'application propose une interface utilisateur simple pour publier et consulter des posts en temps réel. Grâce à l'intégration de Supabase, les utilisateurs bénéficient d'une gestion sécurisée des données et d'une mise à jour en temps réel des posts.
 
-First, run the development server:
+## Table des matières
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. [Fonctionnalités](#fonctionnalités)
+2. [Technologies utilisées](#technologies-utilisées)
+3. [Installation](#installation)
+4. [Utilisation](#utilisation)
+5. [Contributions](#contributions)
+6. [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Fonctionnalités
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Création de posts** : Les utilisateurs peuvent créer de nouveaux posts avec un contenu.
+- **Affichage des posts** : Tous les posts créés par l'utilisateur sont affichés en temps réel.
+- **Authentification sécurisée** : Les utilisateurs peuvent créer un compte et se connecter pour accéder à leurs posts.
+- **Mise à jour en temps réel** : Les posts sont automatiquement mis à jour en temps réel pour tous les utilisateurs connectés grâce à Supabase.
+- **Interface réactive** : L'interface s'adapte à toutes les tailles d'écran grâce à l'utilisation de **Tailwind CSS**.
+- **Téléchargement de photo de profil** : Les utilisateurs connectés peuvent télécharger une photo de profil qui s'affichera à côté de chaque post qu'ils créent.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies utilisées
 
-## Learn More
+- **Next.js** : Framework React pour le développement d'applications web modernes et performantes.
+- **Supabase** : Backend as a Service (BaaS) pour gérer les utilisateurs et les données en temps réel.
+- **React** : Bibliothèque JavaScript pour la création d'interfaces utilisateur interactives.
+- **Tailwind CSS** : Framework CSS utility-first pour un design moderne et responsive.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prérequis
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Avant d'installer le projet, vous devez avoir **Node.js** (version 14 ou supérieure) installé, ainsi que **Yarn** ou **npm**.
 
-## Deploy on Vercel
+### Étapes d'installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clonez le dépôt du projet :
+    ```bash
+    git clone https://github.com/votre-utilisateur/taskmaster.git
+    cd taskmaster
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Installez les dépendances :
+    ```bash
+    npm install
+    # ou
+    yarn install
+    ```
 
-## installation
-npm install
-npm run dev
-npm install -D tailwindcss postcss autoprefixer
+3. Configurez les variables d'environnement dans un fichier `.env.local` :
+    ```plaintext
+    NEXT_PUBLIC_SUPABASE_URL= voir .env.local
+    NEXT_PUBLIC_SUPABASE_ANON_KEY= voir .env.local
+    ```
+
+4. Démarrez le serveur de développement :
+    ```bash
+    npm run dev
+    # ou
+    yarn dev
+    ```
+
+5. Accédez à l'application à l'adresse [http://localhost:3000](http://localhost:3000).
+
+## Utilisation
+
+Une fois l'application lancée, vous pouvez :
+
+- **Inscription / Connexion** : Créez un compte ou connectez-vous pour commencer à publier vos posts.
+- **Créer un post** : Une fois connecté, vous pouvez créer de nouveaux posts avec un titre et un contenu.
+- **Afficher les posts** : Les posts sont affichés dans une liste, et chaque post est mis à jour en temps réel.
+- **Mise à jour en temps réel** : Toute nouvelle publication de post est immédiatement visible pour tous les utilisateurs connectés.
+- **Téléchargement de photo de profil** : Après vous être connecté, vous pouvez télécharger une photo de profil qui sera affichée à côté de chaque post que vous créez.
+
+## Contributions
+
+Les contributions sont les bienvenues ! Pour contribuer :
+
+1. Forkez le projet.
+2. Créez une branche pour votre fonctionnalité :
+    ```bash
+    git checkout -b feature/YourFeature
+    ```
+3. Apportez vos modifications et committez :
+    ```bash
+    git commit -m 'Ajout d'une nouvelle fonctionnalité'
+    ```
+4. Poussez votre branche sur GitHub :
+    ```bash
+    git push origin feature/YourFeature
+    ```
+5. Ouvrez une **Pull Request** pour que vos modifications soient examinées.
+
+## License
+
+Ce projet est sous la licence [MIT](https://opensource.org/licenses/MIT).
